@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">N9NE</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="directions_api_key">AIzaSyA2YY296MqbdFz4bKX0VCvCoLlltWgCKOI</string>
+    <string name="logo">logo</string>
+    <string name="begin">begin</string>
+    <string name="midpointLabel">Midpoint</string>
+    <string name="shareLabel">Share</string>
+    <string name="specialLocationLabel">Special Location</string>
+    <string name="locALabel">Location A</string>
+    <string name="locBLabel">Location B</string>
+    <string name="settingsLabel">Settings</string>
+    <string name="seeOnMapLabel">See On Map</string>
+    <string name="restaurantLabel">Restaurant</string>
+    <string name="parkLabel">Park</string>
+    <string name="gasStationLabel">Gas Station</string>
+    <string name="hotelLabel">Hotel</string>
+    <string name="labelA">A</string>
+    <string name="labelB">B</string>
+    <string name="labelHalfway">Halfway!</string>
+    <string name="labelPercentB">\u0025 closer to B</string>
+    <string name="labelPercentA">%% closer to A</string>
+    <string name="labelPercent">%%</string>
+    <string name="midpointColon">Midpoint\u003A </string>
+    <string name="AColon">A: </string>
+    <string name="BColon">B: </string>
+    <string name="midColon">Mid\u003A</string>
+    <string name="space"> </string>
+    <string name="colon"> : </string>
+    <string name="descriptionImage9">Halfway Picture</string>
+    <string name="descriptionImage8">Halfway Picture Two</string>
+</resources>

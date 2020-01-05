@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AppSettings">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="@string/settingsLabel"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/getLoc"
+        android:layout_width="51dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="112dp"
+        android:drawableStart="@android:drawable/ic_menu_mylocation"
+        android:onClick="getLocation"
+        app:layout_constraintBottom_toTopOf="@+id/locationB"
+        app:layout_constraintStart_toStartOf="@+id/locationB"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.659" />
+
+    <EditText
+        android:id="@+id/locationA"
+        android:layout_width="272dp"
+        android:layout_height="54dp"
+        android:ems="10"
+        android:hint="@string/locALabel"
+        android:textColor="#2eb524"
+        android:inputType="textPostalAddress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/locationB"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintVertical_bias="0.073" />
+
+    <EditText
+        android:id="@+id/locationB"
+        android:layout_width="339dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="@string/locBLabel"
+        android:inputType="textPersonName"
+        android:textColor="#25aedb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationA"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/gotoMap"
+        android:layout_width="334dp"
+        android:layout_height="63dp"
+        android:onClick="gotoMap"
+        android:text="@string/seeOnMapLabel"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.801" />
+
+
+    <CheckBox
+        android:id="@+id/checkBoxRestaurant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="35dp"
+        android:text="@string/restaurantLabel"
+        app:layout_constraintBottom_toTopOf="@+id/checkBoxGasStation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.201"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationB" />
+
+    <CheckBox
+        android:id="@+id/checkBoxPark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="35dp"
+        android:text="@string/parkLabel"
+        app:layout_constraintBottom_toTopOf="@+id/checkBoxHotel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.693"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationB" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/labelA"
+        android:textColor="#38e62c"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/gotoMap"
+        app:layout_constraintEnd_toStartOf="@+id/slider"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/labelB"
+        android:textColor="#25aedb"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/gotoMap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintStart_toEndOf="@+id/slider" />
+
+    <TextView
+        android:id="@+id/sliderText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/midpointLabel"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/slider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxPark"
+        app:layout_constraintVertical_bias="0.755" />
+
+    <SeekBar
+        android:id="@+id/slider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/gotoMap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBoxGasStation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="122dp"
+        android:text="@string/gasStationLabel"
+        app:layout_constraintBottom_toTopOf="@+id/gotoMap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.202"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationB"
+        app:layout_constraintVertical_bias="0.961" />
+
+    <CheckBox
+        android:id="@+id/checkBoxHotel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="122dp"
+        android:text="@string/hotelLabel"
+        app:layout_constraintBottom_toTopOf="@+id/gotoMap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.707"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationB"
+        app:layout_constraintVertical_bias="0.961" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
